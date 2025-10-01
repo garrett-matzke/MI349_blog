@@ -22,7 +22,7 @@
             <header>
                 <h2>Contact Me</h2>
             </header>
-            <form id="contactForm" action="#" method="post" onsubmit="showThankYou(event)">
+            <form id="contactForm" name="contact" method="POST" data-netlify="true" action="#">
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required>
                 <br>
@@ -41,10 +41,6 @@
                 <br>
                 <button type="submit">Submit</button>
             </form>
-            <div id="thankYouMessage" style="display:none; margin-top:1em; color:green; font-weight:bold;">
-                Thank you for submitting the form!<br>
-                <a href="index.html" style="color:#00704A; text-decoration:underline; font-weight:normal;">Back to Website</a>
-            </div>
         </section>
     </main>
     <footer>
