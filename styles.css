@@ -63,6 +63,10 @@ h1, h2, h3 {
   font-family: 'Montserrat', Arial, sans-serif;
   margin-top: 0;
 }
+
+main h2 {
+  margin-top: 2em;
+}
 p {
   line-height: 1.7;
   margin: 1em 0;
