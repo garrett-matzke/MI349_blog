@@ -106,7 +106,6 @@ img[alt~="Logo"] {
   height: auto;
   margin-bottom: 1em;
 }
-/* newsletter thank-you message */
 #newsletter-thanks {
   display: none;
   margin-top: 0.5em;
