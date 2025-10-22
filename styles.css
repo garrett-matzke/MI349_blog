@@ -88,6 +88,24 @@ img[alt~="Logo"] {
   margin: 1em auto;
   max-width: 120px;
 }
+/* New classes replacing inline image styles */
+.logo {
+  display: block;
+  max-width: 150px;
+  margin: 10px auto 1em auto;
+  height: auto;
+}
+.portrait {
+  display: block;
+  max-width: 200px;
+  height: auto;
+  margin-bottom: 1em;
+}
+.article-image {
+  width: 100%;
+  height: auto;
+  margin-bottom: 1em;
+}
 .author {
   font-style: italic;
   color: #fff;
@@ -165,4 +183,92 @@ input[required] {
   font-size: 0.95em;
   color: #555;
   margin-top: 0.5em;
+}
+
+/* Responsive rules appended below - do not create a separate file */
+/* Tablet and small desktop: stack columns, make nav vertical, images responsive */
+@media (max-width: 800px) {
+  main {
+    flex-direction: column;
+    gap: 1.25em;
+    margin: 1.5em auto;
+    padding: 1.5em;
+  }
+  .content,
+  .sidebar {
+    flex: none;
+    width: 100%;
+    padding: 1em;
+  }
+  nav ul {
+    flex-direction: column;
+    gap: 0.25em;
+    padding: 0.5em 0;
+  }
+  nav ul li a {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0.6em 0.75em;
+  }
+  /* make all images scale to their container */
+  img,
+  .content img,
+  .sidebar img,
+  article img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    display: block;
+  }
+  /* floated figures become full-width blocks on small screens */
+  .figure-float {
+    float: none;
+    margin: 0 0 1em 0;
+    max-width: 100%;
+  }
+  /* stack form fields into a single column */
+  form {
+    flex-direction: column;
+    gap: 0.75em;
+  }
+  form label {
+    flex: 1 1 100%;
+  }
+}
+
+/* Mobile: increase touch sizes, readable text, higher contrast where needed */
+@media (max-width: 480px) {
+  body {
+    font-size: 16px; /* base readable size on small devices */
+    line-height: 1.6;
+    background: #ffffff; /* slightly higher contrast for small displays */
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+  h2 {
+    font-size: 1.15rem;
+    margin-top: 0.75em;
+  }
+  nav ul {
+    gap: 0.5em;
+  }
+  thead th,
+  td,
+  th {
+    font-size: 0.95rem;
+  }
+  /* make buttons full width for easier tapping */
+  form button {
+    width: 100%;
+  }
+  footer {
+    padding: 1.25em 0.75em;
+  }
+  /* ensure author labels remain legible */
+  .author {
+    font-size: 0.95rem;
+    color: #005c3a; /* ensure sufficient contrast against white */
+  }
 }
