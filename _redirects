@@ -1,0 +1,2 @@
+# Netlify redirect: after the newsletter form POSTS to /thank-you, serve home with success query
+/thank-you  /?success=1  200
